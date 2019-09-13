@@ -109,12 +109,6 @@ export class ChatComponent implements OnInit {
    this.DoNotshowfull = false;
   }
 
-  read(data){
-    (<HTMLInputElement>document.getElementById('text')).value = '';
-    this.show_arr.push({'side':1,'data':this.answer.value.ans,'sent':1,'message':0,'profile':0}) 
-    this.chatRequest(data);
-  }
-
   sendresponse(data){
     this.show_arr.push({'side':1,'data':data,'sent':1,'message':0,'profile':0}) 
     this.chatRequest(data);
